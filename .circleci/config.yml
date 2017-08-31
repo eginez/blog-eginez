@@ -1,0 +1,15 @@
+# Hugo deployment script based
+# https://www.karelbemelmans.com/2016/10/deploying-a-hugo-website-to-amazon-s3-using-bitbucket-pipelines/
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version
+      - image: karelbemelmans/pipelines-hugo
+    steps:
+      - checkout
+      - run: git submodule init
+      - run: git submodule update
+      # specify any bash command here prefixed with `run: `
+      - run: hugo
+      - run: aws s3 sync --delete public s3://BLOGEGINEZ
