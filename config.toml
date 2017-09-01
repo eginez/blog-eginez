@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://eginez.xyz/"
+baseurl = "http://www.eginez.xyz/"
 # HTML Language Code Reference, such as en, zh-cn
 languageCode = "en"
 title = "Esteban's blog"
