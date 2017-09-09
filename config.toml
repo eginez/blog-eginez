@@ -22,7 +22,7 @@ hasCJKLanguage = true
 	enableDisqus = false
 
 	# Enable googleAnalytics
-	enableGoogleAnalytics = false
+	enableGoogleAnalytics = true
 
 
 	# Add custom assets with their paths relative to the static folder
