@@ -1,2 +1,2 @@
 ## About me
-Hello
+I am software engineer by trade. I love tinkering with things and concepts. I spent a lot of waking hours try to tell  computers what to do. I love learning about computer languages, compilers, and all the insfraestructure we have built to make ourselves be understood by cpus and humas at the same time. I have deep sense of aw for the ocean and my favorite mode of transportation is a sailboat(which I don't do nearly enough of)
