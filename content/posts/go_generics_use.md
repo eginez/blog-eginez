@@ -269,7 +269,7 @@ func possibleErrorThrowingFunction() (error) {
 }
 ```
 
-Other than the verbosity of the closure declaration, this accomplishes what we need if all we needed to return was of type `File`. Replacing the concrete type with go's `interface{}` would look like this:
+Other than the verbosity of the closure declaration, this accomplishes what we need if all we needed to return was of type `File`.A common technique to generlize for a type is to use the `interface{}` type. Replacing the concrete type with go's `interface{}` would look like this:
 
 ```go
 func (ec *ErrorCatcher) TryAny(fn func() (interface{}, error)) interface{} {
@@ -303,7 +303,7 @@ func GetFleInfo() (info os.FileInfo, err error) {
 A few observations:
 
  - We now have to type assert the return value. This seems silly since the return type is well known in all cases (just not the same). Why can't go let me express that!? Falling back to a type that expresses no information hardly seems like the right solution.
- - The above fragment looks marginally better than the manual error checking fragment, mostly due to the typing of the closure argument. Maybe we could have an alias to denote the type of a closure? After all, go's compiler can already infer variable's types, why not function's type? It will cut down on a lot of typing.
+ - The above fragment is marginally better than the manual error checking fragment, mostly due to the typing of the closure argument but Go could infer the types of a function after all, go's compiler can already infer variable's types, why not function's type? It will cut down on a lot of typing.
  
  In my opinion, the above experience highlights the importance of generics. Having some way to express an arbitrary type is very useful when trying to express solutions to problems like the one above.
  
