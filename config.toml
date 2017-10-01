@@ -2,18 +2,18 @@
 baseurl = "http://www.eginez.xyz/"
 # HTML Language Code Reference, such as en, zh-cn
 languageCode = "en"
-title = "Esteban's blog"
+title = "E's Musings"
 theme = "hugo-theme-cactus-plus"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = "UA-105828460-1"
 hasCJKLanguage = true
 
 [params]
-	name = "Esteban's Blog"
-	description = "This is esteban's blog"
-	bio = "Random thoughts put together"
+	name = "E's Musings"
+	description = "E's musings"
+	bio = ""
 	# Enter optionally your twitter account
-	twitter = "your_twitter"
+	twitter = "StbG"
 	enableRSS = false
 
 	# Disqus comment
@@ -35,8 +35,8 @@ hasCJKLanguage = true
 	# Navigation links
 	home = ""
 	about = ""
-	archive = ""
-	subscribe = ""
+	#archive = ""
+	#subscribe = ""
 	tags = ""
 	# Pagination links
 	olderPosts = ""
@@ -62,5 +62,5 @@ hasCJKLanguage = true
 # Add additional social link entries underneath
 [social]
 	#facebook-square = "your_facebook_link"
-  twitter-square = "your_twitter_link"
-  github-square = "your_github_link"
+  twitter-square = "https://twitter.com/StbG"
+  github-square = "https://github.com/eginez"
