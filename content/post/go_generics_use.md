@@ -16,7 +16,7 @@ In the spirit of contributing to the `golang` community, I would like to documen
 
 Error handling sits high among the things that I would like to do better in go, thus while working on a recent project I decided to invest some time looking into how to improve.
 
-I'll start by showing code snippets of what I thought could have been improved.
+I'll start by showing code snippets of what I thought could have been improved:
 ```go
 //Loads the data structures
 func Load(root string, keyRing string, p pgp.PromptFunction) (index *MeerkatsIndex, key *MeerkatsKeys, e error) {
@@ -45,7 +45,7 @@ func Load(root string, keyRing string, p pgp.PromptFunction) (index *MeerkatsInd
 }
 ```
 
-That is a short of example showcasing something pretty obvious: there is a lot repetitive error handling pretty much doing the same thing. My first intuition was to replace all the error checking statements with a function that would check for the status of an error variable and then just panic.
+That is a short of example showcasing something pretty obvious: there is a lot repetitive error handling pretty much doing the same thing. My first intuition was to replace all the error checking statements with a function that would check for the status of an error variable and then just `panic`.
 
 
 ```go
@@ -235,7 +235,7 @@ At a first glance this is great solution for the problem. The error checking log
 
 The first thing I noticed is that one might want to do more than just call `ew.write`. In fact, ideally, we should be able to handle arbitrary error throwing functions.
 
-Closures seem like the right tool for that. Our new error check structure would like so:
+Closures seem like the right tool for that. Our new error check structure would like
 
 ```go
 type ErrorCatcher struct {
