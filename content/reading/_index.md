@@ -1,5 +1,6 @@
 ### Current Reading
 #### 2018 
+- How not to be wrong (audiobook)
 - El chulla Romero y Flores
 - On Strategy Harvard Business Review (unfinished)
 - Gulp
