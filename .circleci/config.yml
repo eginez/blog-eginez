@@ -9,9 +9,9 @@ jobs:
   build:
     docker:
       # specify the version
-      - image: karelbemelmans/pipelines-hugo
+      - image: eginez/ipfs-hugo
     steps:
       - checkout
       # specify any bash command here prefixed with `run: `
       - run: hugo
-      - run: aws s3 sync --delete public s3://www.eginez.xyz
+      - run: ipfs --version
