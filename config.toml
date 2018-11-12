@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://www.eginez.xyz/"
+baseurl = "http://www.eginez.xyz"
 languageCode = "en"
 title = "E's Musings"
 theme = "hemingway"
