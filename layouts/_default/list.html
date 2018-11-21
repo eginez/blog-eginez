@@ -1,11 +1,14 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
+{{ range .Pages}}
 <section class="section">
     <div class="container">
-        <h2 class="title">2018</h2>
+        <h2 class="title">{{.Title}}</h2>
         <div class="content">
             {{ .Content }}
         </div>
     </div>
+    {{ end }}
 </section>
 {{ partial "footer" . }}
+
