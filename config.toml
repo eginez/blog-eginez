@@ -3,7 +3,7 @@ baseurl = "http://www.eginez.xyz"
 languageCode = "en"
 title = "E's Musings"
 theme = "hemingway"
-copyright = "&copy; <a href=\"https://github.com/eginez\">Esteban Ginez</a> 2018"
+copyright = "&copy; <a href=\"https://github.com/eginez\">Esteban Ginez</a> 2020"
 googleAnalytics = "UA-105828460-1"
 
 [params]

@@ -1,19 +1,11 @@
-
 +++
 title = "On change"
 description = ""
-tags = [
-    "life",
-    "new changes",
-    "sailing"
-]
-date = "2020-09-26"
-categories = [
-    "Life",
-]
+tags = [ "life" ]
+date = "2020-08-20"
+categories = [ "Life" ]
 menu = "main"
 +++
-
 In a short couple of days I will be starting graduate school in the Netherlands and as with every big move I have done in my life, there are always uncertainties, anxieties but also expectations. 
 
 I decided to trade a well compensated position in technology for university life and even though I have spent time evaluating, thinking and preparing for this, ultimately one can never know how something will turn out for the best, all we can do is try our hardest.
