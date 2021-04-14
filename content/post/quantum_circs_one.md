@@ -19,19 +19,20 @@ classical thinking.
 The problem consist of coming up with an algorithm to learn the bits of a hidden string `s`. For this problem we restrict
 the string `s` to be a string of `0` and `1`, e.g.: `100110`
 
-The classical algorithm is quite simple. It can be summarized as follows: test every bit of the string with a `1` if the result is 
+The classical algorithm is quite simple. It can be summarized as follows: test every bit of the string with the and operation and a `1`, if the result is 
 `1` then the bit is a `1` otherwise the bit is a `0`. 
 
 To solve this problem using quantum computing I decided to break the algorithm into two parts. The first part will encode
-a unitary function that given a secret string it would allows to recover some information from it. The second part of the
-algorithm consists in preparing a state that represents `all` the possible states of a binary string of length `n`.
+a unitary function whose main purpouse is some information from any secret string. The second part of the
+algorithm consists in preparing a state that represents `all` the possible states of a binary string `s` of size `n`.
+The first part of the algorith is called an `oracle`.
 
 ### The oracle
 
 As mentioned before, the first part of the problems boils down to finding a quantum circuit that can be used to extract 
-information from any string `s`. By doing some exploration and due to previous experinece I had gather on similar problems
-I settled on the oracle that is would basically calculate the sum mod 2 of `x_i` * `s_i` where `x_i` is the `ith` bit of 
-an arbitrary string `x` and `s_i` is the `ith` bit of the hidden string `s`. Or in other words:
+information from any string `s`. By doing some exploration and due to previous experinece I had on similar problems
+I settled on the oracle that is would basically calculate the sum mod 2 of $x_i$ * $s_i$ where $x_i$ is the `ith` bit of 
+an arbitrary string `x` and $s_i$ is the `ith` bit of the hidden string `s`. Or in other words:
 
 $$ (\sum_{i=0}^{n}s_i * x_i)\  mod\ 2 $$
 
@@ -68,13 +69,14 @@ Such a circuit can be created via hadamard gates applied to each of the input qu
 
 ### The final circuit
 
-By combining both parts we get the final circuit at the end of the circuit apply hadamards one last time and read the 
-measurement to classical bits.
+By combining both parts we get the final circuit.
+
+At the end of the circuit we apply hadamards to finalize the search circuit and read the measurement to classical bits.
  
 ![sc4](/img/sc4.png)
 
 The circuit is initialized with the state `|0>` plus an ancilla qubit set to `|1>` which helps us encode the oracle unitary
-as in the phase of the state. Notice the circuit labelled `search circ` is actually built for the hidden string `s` and
+and the uniform superposition. Notice the circuit labelled `search circ` is actually built for the hidden string `s` and
 it varies depending on `s`.
 
 Finally when running the circuit we should expect to read back the hidden string `s` in the classical bits. Interestingly
